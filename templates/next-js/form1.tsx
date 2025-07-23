@@ -11,7 +11,6 @@ export default function Contact() {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) return setError("Enter a valid email.");
     setError("");
 
-    // simulate sending to backend / external API
     const res = await fetch("https://app.proforms.top/f/your_api_key", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
